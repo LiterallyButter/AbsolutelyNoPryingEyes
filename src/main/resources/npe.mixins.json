@@ -6,11 +6,12 @@
   "mixins": [
     "common.ArgumentSignatureDataMapMixin",
     "common.ChatMessageC2SPacketMixin",
+    "server.PacketByteBufMixin",
     "server.ServerCommonNetworkHandlerAccessor",
     "server.ServerPlayNetworkHandlerMixin",
     "server.ServerPropertiesHandlerMixin",
     "server.TextFiltererMixin",
-    "server.PacketByteBufMixin"
+    "server.TextFiltererMixin2"
   ],
   "client": [
     "client.ClientCommonNetworkHandlerAccessor",

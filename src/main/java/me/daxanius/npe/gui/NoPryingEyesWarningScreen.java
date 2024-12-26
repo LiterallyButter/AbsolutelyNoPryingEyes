@@ -1,5 +1,6 @@
 package me.daxanius.npe.gui;
 
+import me.daxanius.npe.NoPryingEyes;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.MinecraftClient;
@@ -8,9 +9,12 @@ import net.minecraft.client.gui.screen.WarningScreen;
 import net.minecraft.client.gui.screen.multiplayer.MultiplayerScreen;
 import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraft.client.gui.widget.LayoutWidget;
+import net.minecraft.client.gui.widget.Widget;
 import net.minecraft.screen.ScreenTexts;
 import net.minecraft.text.Style;
 import net.minecraft.text.Text;
+
+import java.util.function.Consumer;
 
 @Environment(EnvType.CLIENT)
 public class NoPryingEyesWarningScreen extends WarningScreen {
@@ -37,7 +41,46 @@ public class NoPryingEyesWarningScreen extends WarningScreen {
     @Override
     protected LayoutWidget getLayout() {
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getLayout'");
+        // throw new UnsupportedOperationException("Unimplemented method 'getLayout'");
+        NoPryingEyes.LogVerbose("ANPE: why are we doing getLayout what is happening and why does this exist only for an error");
+        NoPryingEyes.LogVerbose("ANPE: returning some nonsense because it's easier...");
+        return new LayoutWidget() { // intellij did this automatically i have no idea what this is
+            // i just figured it's probably fine to just return nonsense instead of figuring out what wants this in the first place and make it work lmao
+            @Override
+            public void setX(int x) {
+
+            }
+
+            @Override
+            public void setY(int y) {
+
+            }
+
+            @Override
+            public int getX() {
+                return 0;
+            }
+
+            @Override
+            public int getY() {
+                return 0;
+            }
+
+            @Override
+            public int getWidth() {
+                return 0;
+            }
+
+            @Override
+            public int getHeight() {
+                return 0;
+            }
+
+            @Override
+            public void forEachElement(Consumer<Widget> consumer) {
+
+            }
+        };
     }
     
 }

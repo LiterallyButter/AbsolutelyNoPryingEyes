@@ -55,8 +55,9 @@ public abstract class ClientPlayNetworkHandlerMixin {
         NoPryingEyesConfig.OnDemandWarning on_demand_warning = NoPryingEyesConfig.getInstance().onDemandWarning;
         if(on_demand_warning == NoPryingEyesConfig.OnDemandWarning.ALWAYS
         || (on_demand_warning == NoPryingEyesConfig.OnDemandWarning.IF_TOAST_NOT_SENT && !NoPryingEyesConfig.getInstance().toastHasBeenSent())) {
-            NoPryingEyes.LogVerbose("Sending warn message");
-            client.player.sendMessage(warning);
+            NoPryingEyes.LogVerbose("NOT Sending warn message BECAUSE I COULDNT GET IT WORKING!!");
+            // ok i tried and couldnt get it working im gonjna remove this
+            // client.player.sendMessage(Text.of(warning.toString().replace("\n", "")), false);
         }
         
     }
